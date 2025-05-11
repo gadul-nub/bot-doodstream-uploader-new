@@ -46,11 +46,11 @@ async def search_user_in_community(
     return None
     try:
         await bot.get_chat_member(
-            '@AJPyroVerse',
+            '@usaha_channel',
             update.chat.id
         )
         await bot.get_chat_member(
-            '@AJPyroVerseGroup',
+            '@usaha_grup',
             update.chat.id
         )
     except UserNotParticipant:
@@ -62,13 +62,13 @@ async def search_user_in_community(
                     [
                         InlineKeyboardButton(
                             'Join our Channel.',
-                            url = 'https://t.me/AJPyroVerse'
+                            url = 'https://t.me/usaha_channel'
                         )
                     ],
                     [
                         InlineKeyboardButton(
                             'Join our Group.',
-                            url = 'https://t.me/AJPyroVerseGroup'
+                            url = 'https://t.me/usaha_grup'
                         )
                     ]
                 ]
@@ -108,7 +108,7 @@ async def isApiValid(
     ):
     try:
         res = get(
-            f"https://doodapi.com/api/account/info?key={apiKey}"
+            f"https://doodapi.co/api/account/info?key={apiKey}"
         )
     except Exception as e:
         await bot.send_message(
