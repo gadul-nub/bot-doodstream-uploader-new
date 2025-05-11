@@ -13,7 +13,7 @@ async def urlUploaderHandler(bot:Update, msg:Message):
         result = apiExist(userid)
         if result:
             apiKey = result['apiKey']
-            apiUrl = f"https://doodapi.com/api/upload/url?key={apiKey}"
+            apiUrl = f"https://doodapi.co/api/upload/url?key={apiKey}"
             message = msg.text
             if '|' in message:
                 url, filename = message.split("|")
